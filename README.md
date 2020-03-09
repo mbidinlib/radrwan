@@ -1,2 +1,2 @@
-# radrwan
-This is a test repository for Ra Rwanda
+# radrwan 
+This is a repository for an do file and a Java script
