@@ -1,13 +1,11 @@
 /*************************************************
 ****** Consolidate and check updates of tracker***
 ****** Date: January 2020            *************
-****** mbidinlib@poverty-action.org       ********
-**************************************************/
+****** mbidinlib@poverty-action.org       ********/
 
 * This do file consolidates 5 trackers from 5 mobilizers working on the fied
 * It also creates an excel output file which contains an enumerator dashboard
-* and a table of duplicates for action
-*NB: trackers should have the same name partern with _1 _2 _3 _4 _5 to uniquely identify them
+
 
 
 * Set paths
@@ -22,7 +20,7 @@ loc dfolder  "`outfolder'/`c(current_date)'"
 
 
 * import individual trackers
-forval j = 1/5 {
+forval j = 1/20 {
 
 	import excel using "`dropbox'/`fname'`j'/`fname'`j'.xlsx", firstrow clear
 	drop A
@@ -30,6 +28,9 @@ forval j = 1/5 {
 	
 	save "`dfolder'/`fname'`j'" , replace   // Save a invividual copy for reference
 }
+
+
+noi di "Hey I changed the do file like this"
 
 
 // consolidate trackers

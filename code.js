@@ -30,7 +30,6 @@ function start(){
          master.getRange("E12:F13").setBorder(true, true, true, true, true, true)
    }
  
-  // Make other sheets visible
   
   // gantt and taks summary
   task_summary.showSheet();
@@ -59,7 +58,7 @@ function start(){
   // Set master as active sheet
   ss.setActiveSheet(master);  
   
-  // Hide Getting Started sheet
+//Yeah, I changed it
   startpage.hideSheet() 
   
 }
@@ -235,7 +234,7 @@ function addNewItem(form_data){
       ss.getSheetByName(sht + "_tasks").showSheet();       
     }
     
-  // activate newly created sheet  
+
   var new_sheet = ss.getSheetByName(sht + "_" + type)
   ss.setActiveSheet(new_sheet)
   ss.moveActiveSheet(3); 
